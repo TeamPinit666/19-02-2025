@@ -21,6 +21,7 @@ const DashboardCard = ({ title, value, percentage, duration, icon: Icon }) => {
   );
 };
 
+
 const App = () => {
   const stats = [
     { title: "Total Profit", value: "67,987", percentage: -0.75, duration: "Last 6 days", icon: FaDollarSign },
