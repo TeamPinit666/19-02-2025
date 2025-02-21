@@ -35,20 +35,20 @@ const App = () => {
         <Navbar />
 
         {/* Statistik Kartu */}
-        <div className="flex flex-wrap gap-1 justify-start mt-7 absolute left-2">
+        <div className="flex flex-wrap gap-3 justify-start mt-9 absolute left-2">
           {stats.map((stat, index) => (
             <DashboardCard key={index} {...stat} />
           ))}
         </div>
 
         {/* PieChart di bawah kartu, diberikan data stats sebagai props */}
-        <div className="mt-32 absolute left-1">
+        <div className="mt-36 absolute left-1">
           <EmployeeLifecycleChart stats={stats} />
         </div>
       </div>
 
       {/* Bagian kanan dengan dua chart */}
-      <div className="w-[45%] absolute -right-5 full flex flex-col items-end gap-1 p-7">
+      <div className="w-[43%] absolute -right-3 full flex flex-col items-end gap-4 p-9">
         <HRStructureChart className="w-full" />
         <RecruitmentChart className="w-full" />
       </div>
