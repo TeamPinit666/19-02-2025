@@ -3,6 +3,7 @@ import HRStructureChart from "./components/HRStructureChart";
 import RecruitmentChart from "./components/RecruitmentChart";
 import EmployeeLifecycleChart from "./components/PieCharts";
 import Navbar from "./components/Navbar";
+import employeeData from "./data/employeeData"; // Import data karyawan
 
 const DashboardCard = ({ title, value, percentage, duration, icon: Icon }) => {
   return (
@@ -21,13 +22,16 @@ const DashboardCard = ({ title, value, percentage, duration, icon: Icon }) => {
   );
 };
 
-
 const App = () => {
+  const totalKaryawan = employeeData.length; // Ambil total jumlah karyawan dari data
+
   const stats = [
     { title: "Total Profit", value: "67,987", percentage: -0.75, duration: "Last 6 days", icon: FaDollarSign },
-    { title: "Total Expenses", value: "$76,965", percentage: 0.9, duration: "Last 9 days", icon: FaFileInvoiceDollar },
     { title: "Total Cost", value: "$59,765", percentage: 0.6, duration: "Last year", icon: FaChartBar },
+    { title: "Total Karyawan", value: totalKaryawan, percentage: 0.9, duration: "Last 9 days", icon: FaFileInvoiceDollar },
     { title: "Total Users", value: "44,278", percentage: 6, duration: "Last week", icon: FaUsers },
+
+
   ];
 
   return (
